@@ -1,0 +1,9 @@
+[submodule "homedir/.vim/bundle/Vundle.vim"]
+	path = homedir/.vim/bundle/Vundle.vim
+	url = git://github.com/VundleVim/Vundle.vim.git
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/powerline/fonts
+[submodule "homedir/.zplugin/bin"]
+	path = homedir/.zplugin/bin
+	url = https://github.com/zdharma/zplugin.git

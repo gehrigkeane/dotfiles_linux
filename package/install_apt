@@ -1,0 +1,29 @@
+ansible                         # https://www.ansible.com/ Automate deployment, configuration, and upgrading
+awscli                          # https://aws.amazon.com/cli/ Official Amazon AWS command-line interface
+brotli                          # https://github.com/google/brotli Generic-purpose lossless compression algorithm by Google
+capnproto                       # https://capnproto.org/ Data interchange format and capability-based RPC system
+cmake                           # https://www.cmake.org/ Cross-platform make
+compton                         # https://github.com/chjj/compton A compositor for X11
+dunst                           # https://dunst-project.org/ Dunst is a lightweight replacement for the notification daemons provided by most desktop environments
+fonts-powerline                 # https://github.com/powerline/fonts Patched fonts for Powerline users
+fzf                             # https://github.com/junegunn/fzf A command-line fuzzy finder
+htop                            # https://hisham.hm/htop/ Improved top
+httpie                          # https://github.com/jkbrzt/httpie Modern CURL + features
+i3-gaps-wm                      # https://github.com/Airblader/i3 + https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer
+jq                              # https://stedolan.github.io/jq/ Awesome JSON command line utility
+kitty                           # https://github.com/kovidgoyal/kitty A cross-platform, fast, feature full, GPU based terminal emulator
+lz4                             # https://lz4.org Lossless compression utility, similar to zip
+ncdu                            # https://dev.yorhel.nl/ncdu NCurses Disk Usage
+nethogs                         # https://raboof.github.io/nethogs/ Net top tool grouping bandwidth per process
+network-manager-openvpn-gnome   # https://askubuntu.com/a/1071042
+octave                          # https://www.gnu.org/software/octave/index.html High-level interpreted language for numerical computing
+pipenv                          # https://github.com/pypa/pipenv Python Development Workflow for Humans
+ripgrep                         # https://github.com/BurntSushi/ripgrep Search tool like grep and The Silver Searcher 
+snapd
+tig                             # https://jonas.github.io/tig/ Text interface for Git repositories
+tmux                            # https://tmux.github.io/ Terminal multiplexer
+tree                            # http://mama.indstate.edu/users/ice/tree/ Display directories as trees (with optional color/HTML output)
+ulauncher                       # https://ulauncher.io/ Application launcher for Linux
+vim                             # https://www.vim.org/
+wget
+zsh

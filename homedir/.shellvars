@@ -1,0 +1,16 @@
+# Set vim as default editor (vi is the default otherwise)
+export EDITOR="vim"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+#########################################################################
+# Temporary aliases useful for demos, other current projects
+#########################################################################
+#export MYDOWNLOADS=$HOME/Downloads
+#export MYDOCUMENTS=$HOME/Documents
+
+#########################################################################
+# Tool paths
+#########################################################################
+export GOPATH=$HOME/go
+export KITTY_CONFIG_DIRECTORY=$HOME

@@ -1,0 +1,4 @@
+bat       # https://github.com/sharkdp/bat Alternative to cat(1) with syntax highlighting
+exa       # https://the.exa.website Modern replacement for ls(1)
+tealdeer  # https://github.com/dbrgn/tealdeer A very fast implementation of tldr in Rust
+ytop      # https://github.com/cjbassi/ytop A TUI system monitor written in Rust
