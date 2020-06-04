@@ -43,13 +43,13 @@ set $ws19 "19"
 ###############################################################################
 
 ## Launch // Terminal // <> Enter ##
-bindsym $mod+Return exec /usr/bin/kitty
+bindsym $mod+Return exec i3-sensible-terminal
 
 ## Launch // Browser // <><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
 ## Launch // Application // <> Space ##
-bindsym $mod+space exec /usr/local/ulauncher
+#bindsym $mod+space exec /usr/bin/ulauncher
 
 ###############################################################################
 # Window and Workspace Navigation
@@ -388,14 +388,14 @@ set $i3-wm.bar.workspace.urgent.background.color "#dc322f"
 set $i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 # Sets i3 font for dialogs
-font Source Code Pro Medium 12
+font Source Code Pro for Powerline 12
 
 ###############################################################################
 # i3 Bar
 ###############################################################################
 
 set $i3-wm.bar.position bottom
-set $i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
+set $i3-wm.bar.font Source Code Pro for Powerline 12, Material Design Icons 12
 set $i3-wm.bar.separator " "
 set $i3-wm.bar.trayoutput none
 set $i3-wm.bar.stripworkspacenumbers yes

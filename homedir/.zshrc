@@ -46,24 +46,24 @@ TIMEFMT="%U user %S system %P cpu %*Es total"
 # Plugins
 #
 
-### Added by Zplugin's installer
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin installer's chunk
+### Added by Zinit's installer
+source ~/.zinit/bin/zinit.zsh
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit installer's chunk
 
-# zplugin ice wait atinit"zpcompinit; zpcdreplay"                               # https://github.com/zdharma/fast-syntax-highlighting
-zplugin light zdharma/fast-syntax-highlighting
+# zinit ice wait atinit"zpcompinit; zpcdreplay"                               # https://github.com/zdharma/fast-syntax-highlighting
+zinit light zdharma/fast-syntax-highlighting
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'                                          # https://github.com/zsh-users/zsh-autosuggestions
-# zplugin ice wait atload"_zsh_autosuggest_start"
-zplugin light zsh-users/zsh-autosuggestions
+# zinit ice wait atload"_zsh_autosuggest_start"
+zinit light zsh-users/zsh-autosuggestions
 
-zplugin light djui/alias-tips                                                   # https://github.com/djui/alias-tips
-zplugin light gehrigkeane/zsh_plugins
+zinit light djui/alias-tips                                                   # https://github.com/djui/alias-tips
+zinit light gehrigkeane/zsh_plugins
 
 #
-# Oh My Zsh Plugins (via zplugin)
+# Oh My Zsh Plugins (via zinit)
 #
 
 # completions are failing somewhere
@@ -71,17 +71,18 @@ zplugin light gehrigkeane/zsh_plugins
 autoload bashcompinit
 bashcompinit
 
-zplugin snippet OMZ::lib/key-bindings.zsh
-zplugin snippet OMZ::lib/history.zsh
-zplugin snippet OMZ::lib/git.zsh
-zplugin snippet OMZ::plugins/brew/brew.plugin.zsh                               # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/brew
-zplugin ice svn; zplugin snippet OMZ::plugins/docker-compose                    # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/docker
-autoload -Uz compinit && compinit -i; zplugin snippet OMZ::plugins/docker/_docker # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/docker
-zplugin snippet OMZ::plugins/fasd/fasd.plugin.zsh
-zplugin snippet OMZ::plugins/git/git.plugin.zsh                                 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git
-zplugin ice svn; zplugin snippet OMZ::plugins/golang                            # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/golang
-# zplugin snippet OMZ::plugins/pyenv/pyenv.plugin.zsh                             # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/pyenv
-# zplugin snippet OMZ::plugins/pipenv/pipenv.plugin.zsh
+zinit snippet OMZ::lib/key-bindings.zsh
+zinit snippet OMZ::lib/history.zsh
+zinit snippet OMZ::lib/git.zsh
+zinit snippet OMZ::plugins/brew/brew.plugin.zsh                                 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/brew
+zinit ice as"completion"; zinit snippet OMZ::plugins/docker-compose                      # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/docker
+zinit ice as"completion"; zinit snippet OMZ::plugins/docker                            # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/docker
+zinit snippet OMZ::plugins/asdf/asdf.plugin.zsh                                 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
+zinit snippet OMZ::plugins/fasd/fasd.plugin.zsh                                 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fasd
+zinit snippet OMZ::plugins/git/git.plugin.zsh                                   # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git
+zinit ice as"completion"; zinit snippet OMZ::plugins/golang                              # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/golang
+# zinit snippet OMZ::plugins/pyenv/pyenv.plugin.zsh                               # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/pyenv
+# zinit snippet OMZ::plugins/pipenv/pipenv.plugin.zsh
 
 #
 # Themes
@@ -111,7 +112,7 @@ POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs history time)
 # zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
-zplugin ice depth=1; zplugin light romkatv/powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 #
 # En fin
@@ -142,7 +143,7 @@ source ~/.profile
 
 # Auto-init pyenv https://github.com/pyenv/pyenv#homebrew-on-mac-os-x
 # The following help with python installations: CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" PYTHON_CONFIGURE_OPTS="--enable-unicode=ucs4"
-eval "$(pyenv init -)"  # replaced with pyenv oh-my-zsh plugin
+# eval "$(pyenv init -)"  # replaced with pyenv oh-my-zsh plugin
 # eval "$(pipenv --completion)"  # replaced with pipenv oh-my-zsh plugin
 # eval "$(rbenv init -)"  # replaced with rbenv from oh-my-zsh plugin
 
@@ -152,3 +153,11 @@ function init_nvm(){
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 }
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+### End of Zinit's installer chunk
