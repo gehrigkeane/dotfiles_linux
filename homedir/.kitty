@@ -24,7 +24,7 @@ font_family        Source Code Pro Medium for Powerline
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 10.0
+font_size 8.0
 
 #: Font size (in pts)
 
@@ -632,7 +632,7 @@ color15 #fdf6e3
 
 #: OS specific tweaks {{{
 
-macos_titlebar_color system
+# macos_titlebar_color system
 
 #: Change the color of the kitty window's titlebar on macOS. A value
 #: of system means to use the default system color, a value of
@@ -658,7 +658,7 @@ macos_titlebar_color system
 
 #: Hide the kitty window from running tasks (Option+Tab) on macOS.
 
-macos_quit_when_last_window_closed yes
+# macos_quit_when_last_window_closed yes
 
 #: Have kitty quit when all the top-level windows are closed. By
 #: default, kitty will stay running, even with no open windows, as is
@@ -774,7 +774,7 @@ macos_quit_when_last_window_closed yes
 #: send an interrupt otherwise.
 
 # map cmd+c        copy_to_clipboard
-# map kitty_mod+v  paste_from_clipboard
+map ctrl+v  paste_from_clipboard
 # map cmd+v        paste_from_clipboard
 # map kitty_mod+s  paste_from_selection
 # map shift+insert paste_from_selection
@@ -974,23 +974,20 @@ map alt+backspace send_text all \x17
 map alt+shift+backspace send_text all \x1b\x64
 
 # Delete line left + right
-map super+backspace send_text all \x15
-map super+shift+backspace send_text all \x0b
+map ctrl+backspace send_text all \x15
+map ctrl+shift+backspace send_text all \x0b
 
-# Move to beginning + end
-#
-map super+left send_text all \x01
-map super+right send_text all \x05
+# Move line left + right
+map ctrl+left send_text all \x01
+map ctrl+right send_text all \x05
 
-# Move word with left arrow ESC+b
-# Move word with right arrow ESC+f
-#
+# Move word left + right (ESC+b,ESC+f) 
 map alt+left send_text all \x1B\x62
 map alt+right send_text all \x1B\x66
 
 # Undo ^Y (Ctrl+shirt+y) or 0x1f ??
 # 0x1f seems to work better with the ZSH plugins for syntax highlighting and auto-suggestions
-map super+z send_text all \x1f
+map ctrl+z send_text all \x1f
 
 # Caps-lock
 map caps

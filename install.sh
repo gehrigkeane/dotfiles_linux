@@ -173,6 +173,7 @@ if [[ $response =~ (y|yes|Y) ]]; then
   info_ "Installing aptitude packages\n"
   sudo add-apt-repository -y ppa:kgilmer/speed-ricer
   sudo add-apt-repository -y ppa:agornostal/ulauncher
+  sudo add-apt-repository -y ppa:pypa/ppa
   # For non-interactive installation `... sudo DEBIAN_FRONTEND=noninteractive apt-get install ...`
   sudo apt-get update && sudo apt-get install -quy $INSTALL_APT
   
@@ -313,6 +314,14 @@ if [[ $response =~ (y|yes|Y) ]] ; then
       mkdir -p $HOME/.config/kitty
       target_dir=$HOME/.config/kitty
       target_file=kitty.conf
+    elif [[ $file == ".i3" ]] ; then
+      mkdir -p $HOME/.config/regolith/i3
+      target_dir=$HOME/.config/regolith
+      target_file=i3
+    elif [[ $file == ".compton" ]] ; then
+      mkdir -p $HOME/.config/regolith/compton
+      target_dir=$HOME/.config/regolith
+      target_file=comnpton
     fi
 
     # if the target file exists:

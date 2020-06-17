@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Restore TMUX w/out _dead_ startup session 
+# ref: https://github.com/tmux-plugins/tmux-resurrect/issues/139#issuecomment-464392088
+alias mux='pgrep -vx tmux > /dev/null && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
+
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
